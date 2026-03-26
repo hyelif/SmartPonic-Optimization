@@ -1,6 +1,6 @@
 # smartponic_v2
 
-A new Flutter project.
+Apps Optimization with Bug fixing & Reduce Lagging.
 
 ## Getting Started
 
