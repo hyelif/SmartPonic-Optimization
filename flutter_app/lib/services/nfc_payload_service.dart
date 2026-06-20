@@ -9,6 +9,10 @@ import 'package:pointycastle/stream/ctr.dart';
 class NfcPayloadService {
   NfcPayloadService._(); // Private constructor to prevent instantiation.
 
+  /// Public factory for dependency injection.
+  factory NfcPayloadService() => _instance;
+  static final NfcPayloadService _instance = NfcPayloadService._();
+
   // ---------------------------------------------------------------------------
   // Named constants
   // ---------------------------------------------------------------------------
@@ -21,7 +25,7 @@ class NfcPayloadService {
 
   /// Development default AES key -- only used when no key is configured.
   /// In production, always set a unique key per node.
-  static const String _defaultAesKey = 'SmartPonic123456';
+  static const String defaultAesKey = 'SmartPonic123456';
   static const String defaultAuthKey = 'AQUA77';
   static const String mimeType = 'application/x-smartponic';
   static const int minLongNdefPayloadLength = 256;
@@ -54,7 +58,7 @@ class NfcPayloadService {
   }
 
   static String validateAesKey(String value) {
-    if (value.trim().isEmpty) return _defaultAesKey;
+    if (value.trim().isEmpty) return defaultAesKey;
     return _normalizeAesKey(value);
   }
 
