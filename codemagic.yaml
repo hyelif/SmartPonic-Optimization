@@ -22,5 +22,3 @@ workflows:
     artifacts:
       - SmartponicV2.ipa
       - build/ios/iphoneos/Runner.app.dSYM.zip
-    publishing:
-      email: {}
