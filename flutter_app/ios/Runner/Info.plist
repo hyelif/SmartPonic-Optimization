@@ -33,6 +33,8 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SmartPonic uses your location to discover nearby ESP32 devices on the local network.</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>SmartPonic connects directly to your ESP32 node over local Wi-Fi.</string>
 	<key>NFCReaderUsageDescription</key>
